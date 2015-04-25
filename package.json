@@ -1,0 +1,46 @@
+{
+  "name": "metronic-statsd",
+  "version": "0.2.0",
+  "description": "A statsd adapter for metronic",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LeanKit-Labs/metronic-statsd"
+  },
+  "keywords": [
+    "metronic",
+    "metrics",
+    "statsd"
+  ],
+  "author": "LeanKit",
+  "contributors": [
+    {
+      "name": "Alex Robson",
+      "url": "http://nerdventure.io"
+    }
+  ],
+  "license": "MIT License - http://opensource.org/licenses/MIT",
+  "bugs": {
+    "url": "https://github.com/LeanKit-Labs/metronic-statsd/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "homepage": "https://github.com/LeanKit-Labs/metronic-statsd",
+  "devDependencies": {
+    "biggulp": "~0.0.2",
+    "chai": "^2.1.1",
+    "chai-as-promised": "^4.3.0",
+    "gulp": "^3.8.11",
+    "metronic": "~0.2.0",
+    "proxyquire": "^1.4.0",
+    "sinon": "^1.14.1"
+  },
+  "dependencies": {
+    "lodash": "^3.6.0",
+    "lynx": "^0.2.0"
+  }
+}
