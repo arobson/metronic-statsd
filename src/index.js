@@ -16,7 +16,11 @@ module.exports = function( config ) {
 			if ( data.type === 'time' ) {
 				data.value = convert( data.value, data.units, 'ms' );
 			}
-			client.count( data.key, data.value, sampling );
+			var key = data.key;
+			if( config.apiPrefix ) {
+				key = config.apiPrefix + key;
+			}
+			client.count( key, data.value, sampling );
 		},
 		setConverter: function( converter ) {
 			convert = converter;
