@@ -18,9 +18,15 @@ module.exports = function( config ) {
 			}
 			var key = data.key;
 			if( config.apiPrefix ) {
-				key = config.apiPrefix + key;
+				key = [ config.apiPrefix, key ].join( '.' );
 			}
-			client.count( key, data.value, sampling );
+			switch( data.type ) {
+				case 'time':
+					client.timing( key, data.value, sampling );
+					break;
+				default:
+					client.count( key, data.value, sampling );
+			}
 		},
 		setConverter: function( converter ) {
 			convert = converter;
