@@ -16,8 +16,8 @@ var clientMock = {
 	decrement: function( key, sampling ) {
 		this.metrics.push( { key: key, sampling: sampling, decrement: true } );
 	},
-	guage: function( key, value, sampling ) {
-		this.metrics.push( { key: key, value: value, sampling: sampling, guage: true } );
+	gauge: function( key, value, sampling ) {
+		this.metrics.push( { key: key, value: value, sampling: sampling, gauge: true } );
 	},
 	increment: function( key, sampling ) {
 		this.metrics.push( { key: key, sampling: sampling, increment: true } );
@@ -58,7 +58,7 @@ describe( 'Adapter', function() {
 				timestamp: stamp
 			} );
 			adapter.onMetric( {
-				type: 'guage',
+				type: 'gauge',
 				key: 'aGuage',
 				value: 10,
 				units: '',
@@ -70,7 +70,7 @@ describe( 'Adapter', function() {
 			clientMock.metrics.should.eql( [
 				{ key: 'duration', value: 1000, sampling: undefined, timing: true },
 				{ key: 'meter', value: 1, sampling: undefined, count: true },
-				{ key: 'aGuage', value: 10, sampling: undefined, guage: true }
+				{ key: 'aGuage', value: 10, sampling: undefined, gauge: true }
 			] );
 		} );
 

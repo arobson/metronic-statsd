@@ -38,8 +38,8 @@ module.exports = function( config ) {
 			if ( data.type === 'time' ) {
 				data.value = convert( data.value, data.units, 'ms' );
 				client.timing( data.key, data.value, sampling );
-			} else if ( data.guage || data.type === 'guage' || _.contains( systemGauges, data.name ) ) {
-				client.guage( data.key, data.value, sampling );
+			} else if ( data.gauge || data.type === 'gauge' || _.contains( systemGauges, data.name ) ) {
+				client.gauge( data.key, data.value, sampling );
 			} else if ( data.set || data.type === 'set' ) {
 				client.set( data.key, data.value, sampling );
 			} else if ( data.increment || data.type === 'increment' ) {
