@@ -15,6 +15,14 @@ var statsd = require( 'metronic-statsd' )(
 metronic.use( statsd );
 ```
 
+## Types of Metrics
+StatsD does _not_ treat all metrics equally. By default, this adapter will publish everything as a count unless the type is set as `time`. To change this, set a flag on the metric object itself when creating it to specify a different type. Here's the list of properties to set to true - please note: they are mutually exclusive:
+
+ * `guage`
+ * `set`
+ * `increment` - value is ignored
+ * `decrement` - value is ignored
+
 ## Config
 The only optional thing you can add to the config at the moment is an `apiPrefix` property which allows you to use this library in conjunction with hostedgraphite's StatsD collector.
 

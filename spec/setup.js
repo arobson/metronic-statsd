@@ -5,3 +5,4 @@ global.expect = chai.expect;
 global._ = require( 'lodash' );
 global.fs = require( 'fs' );
 global.sinon = require( 'sinon' );
+global.proxyquire = require( 'proxyquire' );

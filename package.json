@@ -1,6 +1,6 @@
 {
   "name": "metronic-statsd",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A statsd adapter for metronic",
   "main": "src/index.js",
   "scripts": {
@@ -22,7 +22,7 @@
       "url": "http://nerdventure.io"
     }
   ],
-  "license": "MIT License - http://opensource.org/licenses/MIT",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/LeanKit-Labs/metronic-statsd/issues"
   },
@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/LeanKit-Labs/metronic-statsd",
   "devDependencies": {
-    "biggulp": "~0.0.2",
+    "biggulp": "~0.2.2",
     "chai": "^2.1.1",
     "chai-as-promised": "^4.3.0",
     "gulp": "^3.8.11",
